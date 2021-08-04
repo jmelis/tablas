@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tablas/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/tablas/static/js/main.2ad7a6ad.chunk.js",
+    "main.js.map": "/tablas/static/js/main.2ad7a6ad.chunk.js.map",
+    "runtime-main.js": "/tablas/static/js/runtime-main.249b8250.js",
+    "runtime-main.js.map": "/tablas/static/js/runtime-main.249b8250.js.map",
+    "static/js/2.743a40cc.chunk.js": "/tablas/static/js/2.743a40cc.chunk.js",
+    "static/js/2.743a40cc.chunk.js.map": "/tablas/static/js/2.743a40cc.chunk.js.map",
+    "static/js/3.edbbbeab.chunk.js": "/tablas/static/js/3.edbbbeab.chunk.js",
+    "static/js/3.edbbbeab.chunk.js.map": "/tablas/static/js/3.edbbbeab.chunk.js.map",
+    "index.html": "/tablas/index.html",
+    "static/css/main.ea1455b2.chunk.css.map": "/tablas/static/css/main.ea1455b2.chunk.css.map",
+    "static/js/2.743a40cc.chunk.js.LICENSE.txt": "/tablas/static/js/2.743a40cc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.249b8250.js",
+    "static/js/2.743a40cc.chunk.js",
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.2ad7a6ad.chunk.js"
+  ]
+}
