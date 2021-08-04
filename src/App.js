@@ -1,12 +1,29 @@
+import React, { useState } from 'react';
+
+import Home from './components/home.js';
+import Game from './components/game.js';
+import levels from './utils/levels.js';
+
 import './App.css';
 
-import Game from './components/game.js';
-
-import questions from './utils/questions.js';
-
 function App() {
+  const [levelName, setLevelName] = useState();
+  const [page, setPage] = useState('home');
+
+  function handleGameStart(e) {
+    setLevelName(e.target.value);
+    setPage('game');
+  };
+
+  const router = {
+    'home': <Home handleGameStart={handleGameStart} levels={levels} />,
+    'game': <Game levelName={levelName} questions={levels[levelName]} setPage={setPage}/>,
+  };
+
   return (
-    <Game questions={questions(5)}/>
+    <div className="App">
+      {router[page]}
+    </div>
   )
 }
 
