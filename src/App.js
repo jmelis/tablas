@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Home from './components/home.js';
 import Game from './components/game.js';
-import levels from './utils/levels.js';
+import levels from './assets/levels.json';
 
 import './App.css';
 
@@ -17,7 +17,7 @@ function App() {
 
   const router = {
     'home': <Home handleGameStart={handleGameStart} levels={levels} />,
-    'game': <Game levelName={levelName} questions={levels[levelName]} setPage={setPage}/>,
+    'game': <Game levelName={levelName} levels={levels} setPage={setPage}/>,
   };
 
   return (
