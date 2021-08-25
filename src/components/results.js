@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 
 function getStorageKey(key) {
     let data = localStorage.getItem(key);
@@ -25,6 +25,9 @@ function Results({ data, setPage, levelName }) {
     const totalTime = (data[data.length - 1] - data[0]) / 1e3;
     const numItems = (data.length - 1) / 2;
 
+    const minutes = Math.floor(totalTime / 60);
+    const seconds = Math.floor(totalTime - minutes * 60);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     let questionTimes = [];
     for (let i = 0; i < numItems; i++) {
@@ -45,7 +48,7 @@ function Results({ data, setPage, levelName }) {
     return (<div className="results">
         <div>levelName: {levelName}</div>
         <div>timestamp: {gameTimestamp}</div>
-        <div>total time: {totalTime}</div>
+        <div>total time: {minutes}m{seconds}s</div>
         <div>numItems: {numItems}</div>
         <div><ul>{questionTimes.map(e => <li key={e[0]}><pre>({e[0]}) {e[1]} time {e[2]}s</pre></li>)}</ul></div>
         <div><input type='button' value='home' onClick={handleHome} /></div>

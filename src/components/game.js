@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Progress from './progress.js';
 import Results from './results.js';
 
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -42,6 +43,7 @@ function Game({ setPage, levelName, levels }) {
           <div>count: {qIndex + 1} / {questions.length}</div>
           <div>{qLabel}</div>
           <input type='button' value='next' onClick={handleNext}/>
+          <Progress data={data}/>
         </div>}
 
         {!gameOnGoing && <Results setPage={setPage} data={data} levelName={levelName} />}
